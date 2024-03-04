@@ -1,20 +1,32 @@
 {
-  "name": "backend-turborepo",
-  "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "prettier": "^3.1.1",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@8.9.0",
-  "engines": {
-    "node": ">=18"
-  }
+    "name": "backend-turborepo",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "turbo build",
+        "dev": "turbo dev",
+        "lint": "turbo lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "dev:node": "dotenv -- turbo dev --filter=@/chatapp-nodejs-server",
+        "dev:hono": "dotenv -- turbo dev --filter=@/chatapp-hono-server",
+        "dev:vite": "dotenv -- turbo dev --filter=@/frontend-chatapp",
+        "dev:node-vite": "dotenv -- turbo dev --filter=@/frontend-chatapp --filter=@/chatapp-nodejs-server",
+        "dev:hono-vite": "dotenv -- turbo dev --filter=@/frontend-chatapp --filter=@/chatapp-hono-server"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/typescript-config": "workspace:*",
+        "prettier": "^3.1.1",
+        "turbo": "latest",
+        "dotenv": "^16.4.5",
+        "dotenv-cli": "latest"
+    },
+    "packageManager": "pnpm@8.9.0",
+    "engines": {
+        "node": ">=18"
+    }
 }
+

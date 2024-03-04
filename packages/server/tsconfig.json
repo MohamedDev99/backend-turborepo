@@ -1,0 +1,26 @@
+{
+    "extends": "../typescript-config/base.json",
+    "compilerOptions": {
+        "baseUrl": "../..",
+        "paths": {
+            "@s-constants/*": ["packages/server/src/constants/*"],
+            "@s-constants": ["packages/server/src/constants"],
+            "@s-db/*": ["packages/server/src/db/*"],
+            "@s-db": ["packages/server/src/db"],
+            "@s-config/*": ["packages/server/src/config/*"],
+            "@s-config": ["packages/server/src/config"],
+            "@s-utils/*": ["packages/server/src/utils/*"],
+            "@s-utils": ["packages/server/src/utils"],
+            "@s-models/*": ["packages/server/src/models/*"],
+            "@s-models": ["packages/server/src/models"],
+            "@s-middlewares/*": ["packages/server/src/middlewares/*"],
+            "@s-middlewares": ["packages/server/src/middlewares"],
+            "@s-types/*": ["packages/server/src/types/*"],
+            "@s-types": ["packages/server/src/types"],
+            "@s-services/*": ["packages/server/src/services/*"]
+            // "@s-services":["packages/server/src/services"]
+        },
+        "declaration": true,
+        "typeRoots": ["packages/server/src/types"]
+    }
+}

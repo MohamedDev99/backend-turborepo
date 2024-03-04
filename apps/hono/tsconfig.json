@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "hono/jsx",
+        "baseUrl": "../..",
+        "paths": {
+            "@s-h-routes/*": ["apps/hono/src/routes/*"],
+            "@s-h-controllers/*": ["apps/hono/src/controllers/*"],
+            "@s-constants/*": ["packages/server/src/constants/*"],
+            "@s-constants": ["packages/server/src/constants"],
+            "@s-db/*": ["packages/server/src/db/*"],
+            "@s-db": ["packages/server/src/db"],
+            "@s-config/*": ["packages/server/src/config/*"],
+            "@s-config": ["packages/server/src/config"],
+            "@s-utils/*": ["packages/server/src/utils/*"],
+            "@s-utils": ["packages/server/src/utils"],
+            "@s-models/*": ["packages/server/src/models/*"],
+            "@s-models": ["packages/server/src/models"],
+            "@s-middlewares/*": ["packages/server/src/middlewares/*"],
+            "@s-middlewares": ["packages/server/src/middlewares"],
+            "@s-types/*": ["packages/server/src/types/*"],
+            "@s-types": ["packages/server/src/types"],
+            "@s-services/*": ["packages/server/src/services/*"]
+        },
+        "typeRoots": ["packages/server/src/types"],
+        "declaration": true
+    }
+    // "include": ["packages/server/src/types/*.ts", "packages/server/src/types/*.d.ts"]
+}
+
